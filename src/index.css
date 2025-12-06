@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+main {
+  overflow-x: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+.text-gold-hover:hover {
+  @apply text-yellow-900 duration-100 transition-all;
+}
