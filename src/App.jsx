@@ -12,9 +12,8 @@ const App = () => {
         <Navbar />
         <Hero />
         <Cocktails />
-        <About />
         <Art />
-        <section className="h-dvh bg-red-300"></section>
+        <About />
       </main>
     </>
   );
