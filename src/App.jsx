@@ -5,6 +5,7 @@ import Cocktails from "./sections/Cocktails";
 import About from "./sections/About";
 import Art from "./sections/Art";
 import Previews from "./sections/Previews";
+import Contact from "./Contact";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Art />
         <About />
         <Previews />
+        <Contact />
       </main>
     </>
   );
