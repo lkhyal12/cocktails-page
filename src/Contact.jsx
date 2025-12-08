@@ -1,7 +1,42 @@
 import React from "react";
 import { openingHours, socials } from "./constants";
-
+import gsap from "gsap";
+import { SplitText, ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(SplitText, ScrollTrigger);
 const Contact = () => {
+  useGSAP(() => {
+    const tm = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 20%",
+      },
+    });
+
+    tm.from("#f-right-leaf", {
+      y: "-50%",
+      x: "20%",
+      duration: 0.5,
+      ease: "power1.inOut",
+    })
+      .from(
+        "#f-left-leaf",
+        {
+          y: "50%",
+          x: "-20%",
+          duration: 0.5,
+          ease: "power1.inOut",
+        },
+        "-=0.3"
+      )
+      .from("h3", {
+        stagger: 0.02,
+        ease: "power1.inOut",
+        yPercent: 100,
+        opacity: 0,
+        duration: 1,
+      });
+  });
   return (
     <section id="contact" className="min-h-dvh radial-gradient py-15 relative">
       <h2 className="text-3xl md:text-4xl text-center">Where To Find Us</h2>
