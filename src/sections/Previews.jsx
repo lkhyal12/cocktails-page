@@ -78,7 +78,7 @@ const Previews = () => {
         })}
       </div>
 
-      <div className="arrows px-10 flex items-center justify-between mt-30 mb-20">
+      <div className="arrows relative z-10 px-10 flex items-center justify-between mt-30 mb-20">
         <button
           className="cursor-pointer hover:text-yellow-200"
           onClick={() => handleIndexChange(-1 + currentIndex)}

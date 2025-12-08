@@ -14,7 +14,7 @@ const Contact = () => {
     });
 
     tm.from("#f-right-leaf", {
-      y: "-50%",
+      // y: "-50%",
       x: "20%",
       duration: 0.5,
       ease: "power1.inOut",
@@ -22,7 +22,7 @@ const Contact = () => {
       .from(
         "#f-left-leaf",
         {
-          y: "50%",
+          // y: "50%",
           x: "-20%",
           duration: 0.5,
           ease: "power1.inOut",
@@ -39,8 +39,10 @@ const Contact = () => {
   });
   return (
     <section id="contact" className="min-h-dvh radial-gradient py-15 relative">
-      <h2 className="text-3xl md:text-4xl text-center">Where To Find Us</h2>
-      <div className="contact-content flex flex-col items-center gap-6 md:gap-8 mt-10">
+      <h2 className="text-3xl md:text-4xl text-center relative z-10">
+        Where To Find Us
+      </h2>
+      <div className="contact-content relative z-10 flex flex-col items-center gap-6 md:gap-8 mt-10">
         <div className="text-center">
           <h3 className="text-lg mb-3 uppercase">Visit Our Bar</h3>
           <p className="text-2xl">456, Raq Blvd. #404, Los Angeles, CA 90210</p>
@@ -54,7 +56,7 @@ const Contact = () => {
         <div className="text-center">
           <h3 className="text-lg mb-3 uppercase">Open Every Day</h3>
           {openingHours.map((h) => (
-            <p className="text-2xl">
+            <p key={h.day} className="text-2xl">
               {h.day} : {h.time}
             </p>
           ))}
@@ -64,7 +66,12 @@ const Contact = () => {
           <h3 className="text-lg mb-3 uppercase">socials</h3>
           <div className="flex items-center gap-3">
             {socials.map((s) => (
-              <img className="cursor-pointer" src={s.icon} alt="" />
+              <img
+                key={s.name}
+                className="cursor-pointer"
+                src={s.icon}
+                alt=""
+              />
             ))}
           </div>
         </div>

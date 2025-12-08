@@ -17,6 +17,23 @@ const Hero = () => {
       ease: "power1.inOut",
       duration: 0.5,
     });
+
+    const tm = gsap.timeline({
+      duration: 1,
+      ease: "power.inOut",
+    });
+
+    tm.from(".leftSide", {
+      yPercent: 100,
+      opacity: 0,
+    }).from(
+      ".rightSide",
+      {
+        yPercent: -100,
+        opacity: 0,
+      },
+      "-=0.2"
+    );
   });
   useGSAP(() => {
     const startValue = isMobile ? "top 50%" : "center 60%";
@@ -68,7 +85,7 @@ const Hero = () => {
           mojito
         </h1>
 
-        <div className="content relative z-40 flex flex-col md:flex-row items-center justify-between w-9/10 mx-auto">
+        <div className="content relative z-40 flex max-md:flex-col md:flex-row items-center justify-between w-9/10 mx-auto ">
           <div className="leftSide w-full md:w-78 mb-10 md:mb-0">
             <p className="text-lg">Cool. Grisp. Classic.</p>
             <h2 className="text-yellow-100  text-center  text-3xl md:text-5xl font-bold mt-3">

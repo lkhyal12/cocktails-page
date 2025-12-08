@@ -3,7 +3,7 @@ import { cocktailLists, mockTailLists } from "../constants";
 
 const Cocktails = () => {
   return (
-    <section id="cocktails" className="noisyBg h-dvh relative">
+    <section id="cocktails" className="noisyBg min-h-dvh relative">
       <img
         src="images/cocktail-left-leaf.png"
         alt="l-leaf"
@@ -17,7 +17,7 @@ const Cocktails = () => {
         id="c-right-leaf"
         className="absolute bottom-0 right-0"
       />
-      <div className="list relative z-20 flex items-center justify-between h-full w-full px-10 md:px-20">
+      <div className="list relative z-20 flex flex-col md:flex-row items-center justify-between h-full w-full px-10 md:px-20">
         <div className="popular">
           <h2 className="my-6 text-2xl">Most Popular Cocktails</h2>
           <ul>

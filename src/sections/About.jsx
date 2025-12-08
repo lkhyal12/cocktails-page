@@ -31,22 +31,22 @@ const About = () => {
         </div>
 
         <div className="gridContent mt-10 grid grid-cols-1 md:grid-cols-12 gap-5">
-          <div className="md:col-span-3">
+          <div className="col-span-1 md:col-span-3">
             <img src="/images/abt1.png" alt="" />
           </div>
 
-          <div className="md:col-span-6">
+          <div className="col-span-1 md:col-span-6">
             <img src="/images/abt2.png" alt="grid img" />
           </div>
 
-          <div className="md:col-span-3">
+          <div className=" col-span-1 md:col-span-3">
             <img src="/images/abt5.png" alt="grid img" />
           </div>
 
-          <div className="col-span-8">
+          <div className="col-span-1 md:col-span-8">
             <img src="/images/abt3.png" alt="grid img 3" />
           </div>
-          <div className="col-span-4">
+          <div className="col-span-1 md:col-span-4">
             <img src="/images/abt4.png" alt="grid img 3" />
           </div>
         </div>
