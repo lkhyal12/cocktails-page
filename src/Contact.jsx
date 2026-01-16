@@ -27,7 +27,7 @@ const Contact = () => {
           duration: 0.5,
           ease: "power1.inOut",
         },
-        "-=0.3"
+        "-=0.3",
       )
       .from("h3", {
         stagger: 0.02,
